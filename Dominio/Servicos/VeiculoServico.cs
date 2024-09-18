@@ -32,9 +32,9 @@ public class VeiculoServico : IVeiculosServico
     _contexto.SaveChanges();
   }
 
-  public void BuscarPorId(int id)
+  public Veiculo? BuscaPorId(int id)
   {
-    _contexto.Veiculos.Where(v => v.Id == id).FirstOrDefault();
+    return _contexto.Veiculos.Where(v => v.Id == id).FirstOrDefault();
   }
 
   public void Incluir(Veiculo veiculo)
@@ -52,7 +52,7 @@ public class VeiculoServico : IVeiculosServico
     }
 
     int itensPorPagina = 10;
-    
+
     if (pagina != null)
     {
       query = query
