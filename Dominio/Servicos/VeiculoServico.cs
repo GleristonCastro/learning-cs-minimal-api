@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MinimalApi.Dominio.Entidades;
-using MinimalApi.Dominio.interfaces;
+using MinimalApi.Dominio.Interfaces;
 using MinimalApi.Infraestrutura.Db;
 
 namespace MinimalApi.Dominio.Servicos;
@@ -19,11 +19,6 @@ public class VeiculoServico : IVeiculosServico
   {
     _contexto.Veiculos.Remove(veiculo);
     _contexto.SaveChanges();
-  }
-
-  public void Apagar(int id)
-  {
-    throw new NotImplementedException();
   }
 
   public void Atualizar(Veiculo veiculo)
