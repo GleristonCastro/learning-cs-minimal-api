@@ -1,7 +1,5 @@
-namespace MinimalApi.Dominio.ModelViews
+namespace MinimalApi.Dominio.ModelViews;
+public class ErrosDeValidacao
 {
-    public class ErrosDeValidacao
-    {
-        public List<String> Mensagens { get; set; }
-    }
+    public List<String> Mensagens { get; set; }
 }
