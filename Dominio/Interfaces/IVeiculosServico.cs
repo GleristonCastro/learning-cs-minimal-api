@@ -1,7 +1,7 @@
 using MinimalApi.Dominio.Entidades;
 using MinimalApi.DTOs;
 
-namespace MinimalApi.Dominio.interfaces;
+namespace MinimalApi.Dominio.Interfaces;
 
 public interface IVeiculosServico
 {
@@ -9,5 +9,5 @@ public interface IVeiculosServico
   Veiculo? BuscarPorId(int id);
   void Incluir(Veiculo veiculo);
   void Atualizar(Veiculo veiculo);
-  void Apagar(int id);
+  void Apagar(Veiculo veiculo);
 }
